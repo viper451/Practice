@@ -9,10 +9,15 @@ public class EqualSplitStratergy implements  SplitStratergy{
     public HashMap<Integer, Integer> splitStratergy(int amount, List<Integer>involvedUserId){
         HashMap<Integer,Integer> mp = new HashMap<>();
 
-        int equalAmount = amount / involvedUserId.size();
+        int size = involvedUserId.size();
+        if (size == 0) return mp;
 
-        for(int i =0;i<involvedUserId.size();i++){
-            mp.put(involvedUserId.get(i),equalAmount);
+        int equalAmount = amount / size;
+        int remainder = amount % size; // distribute remainder deterministically to first `remainder` users
+
+        for (int i = 0; i < size; i++) {
+            int share = equalAmount + (i < remainder ? 1 : 0);
+            mp.put(involvedUserId.get(i), share);
         }
         return mp;
 
