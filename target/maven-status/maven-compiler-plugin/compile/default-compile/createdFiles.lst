@@ -1,5 +1,6 @@
 com/example/concurrency/ReadWriteLock.class
 com/example/Dice/Symbol.class
+com/example/newpackage/SeatReservationService.class
 com/example/solidp/LiskivSub.class
 ratelimiter/Bucket.class
 com/example/DesignPattern/StraFac/PaymentFactory.class
@@ -13,6 +14,7 @@ com/example/NotificationChannel/entity/NotificationChannel.class
 com/example/Dice/Main.class
 com/example/DesignPattern/StraFac/NetBankingPayment.class
 com/example/Thread/PrintCharacter.class
+com/example/newpackage/SeatBookingRequest.class
 com/example/concurrency/Counter.class
 com/example/Main.class
 com/example/concurrency/ProducerConsumer.class
